@@ -1,5 +1,4 @@
 window.PursuitCollective = {};
-window.PursuitCollective.logoAnimation = new LogoAnimation();
 
 $('.subscription-article-topic').each(function() {
   var text = $(this).text();
@@ -40,7 +39,7 @@ $(document).ready(function(){
   $('.navbar_search-button').click(openSearchBar);
   $('.footer_search-link').click(openSearchBar);
   $('.navbar_search-cancel-btn').click(closeSearchBar);   
-})
+}) 
 
 
 
