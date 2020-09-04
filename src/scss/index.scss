@@ -20,3 +20,19 @@ input[type="checkbox"]:checked + .checkbox-label {
 .cms-item:nth-child(3n+3) .cms-vertical-line {
   display: none;
 }
+
+
+.logo-animation-container {
+  transition: transform .3s, opacity .2s;
+
+  img {
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  &.hide {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+}
