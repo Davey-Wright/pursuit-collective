@@ -23,6 +23,7 @@ var openSearchBar = function(){
   }, 350);
 };
 
+
 var closeSearchBar = function(){
   $('.navbar_search-wrapper').addClass('navbar_search-wrapper--hidden');
   
@@ -34,6 +35,9 @@ var closeSearchBar = function(){
 
 
 
-$('.navbar_search-button').click(openSearchBar);
-$('.footer_search-link').click(openSearchBar);
-$('.navbar_search-cancel-btn').click(closeSearchBar);   
+$(document).ready(function(){
+  $('.navbar_search-button').click(openSearchBar);
+  $('.footer_search-link').click(openSearchBar);
+  $('.navbar_search-cancel-btn').click(closeSearchBar);   
+})
+
