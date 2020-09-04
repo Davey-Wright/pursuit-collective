@@ -1,4 +1,5 @@
 window.PursuitCollective = {};
+window.PursuitCollective.logoAnimation = new LogoAnimation();
 
 $('.subscription-article-topic').each(function() {
   var text = $(this).text();
