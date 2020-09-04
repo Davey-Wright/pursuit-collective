@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "scripts": {
-    "tailwind-vars": "tailwindcss-export-config --config=tailwind.config.js --destination=src/scss/_tailwind-variables --flat=true --format=scss"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -31,8 +28,6 @@
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
     "postcss-simple-vars": "^5.0.2",
-    "tailwindcss": "^1.2.0",
-    "tailwindcss-export-config": "^2.0.2",
     "through2": "^3.0.1"
   },
   "dependencies": {}

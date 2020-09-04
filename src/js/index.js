@@ -44,9 +44,9 @@ $(document).ready(function(){
 
 
 
-window.onload = function(){
+window.onload = function() {
   $('.logo-animation-container').append('<img src="https://cdn.jsdelivr.net/gh/Davey-Wright/pursuit-collective@master/assets/logo-animate.svg" />')
-  
+ 
   this.setTimeout( () => {
     $('.logo-animation-container').addClass('hide')
   }, 4000);
