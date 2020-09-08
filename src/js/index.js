@@ -39,7 +39,7 @@ let homepage_logo_animation = function(){
        
   logo_animator.append('<img src="https://cdn.jsdelivr.net/gh/Davey-Wright/pursuit-collective@latest/assets/logo-animation.svg" />')
 
-  this.setTimeout( function() { 
+  this.setTimeout( function() {  
     $('.logo-animation').addClass('hide') 
   }, 5000);
 }
