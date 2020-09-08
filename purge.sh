@@ -9,8 +9,8 @@ http://purge.jsdelivr.net/ \
   "path": [
     "gh/Davey-Wright/pursuit-collective@latest/assets/logo-animation.svg",
     "gh/Davey-Wright/pursuit-collective@latest/dist/vendors.min.js",
-    "gh/Davey-Wright/pursuit-collective@latest/dist/app.min.js",
+    "gh/Davey-Wright/pursuit-collective@latest/dist/application.min.js",
     "gh/Davey-Wright/pursuit-collective@latest/dist/vendors.min.css",
-    "gh/Davey-Wright/pursuit-collective@latest/dist/app.min.css"
+    "gh/Davey-Wright/pursuit-collective@latest/dist/application.min.css"
   ]
 }'

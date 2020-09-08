@@ -3,8 +3,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.section-hero-editorial, 
+.grid-editorial-foreword, 
+.grid-table-of-content,
 .hero-section {
-  max-height: calc(100vh - 9rem);
+  min-height: calc(100vh - 6rem) !important;
 }
 
 
@@ -19,7 +22,7 @@ input[type="checkbox"]:checked + .checkbox-label {
 
 .cms-item:nth-child(3n+3) .cms-vertical-line {
   display: none;
-}
+} 
 
 
 .logo-animation-container {
@@ -36,3 +39,16 @@ input[type="checkbox"]:checked + .checkbox-label {
     opacity: 0;
   }
 }
+
+
+
+.logo-animation.hide {
+  transform: translateY(-150%);
+  opacity: 0;
+}
+
+.logo-animation {
+transition: transform .6s, opacity .4s;
+}
+
+
