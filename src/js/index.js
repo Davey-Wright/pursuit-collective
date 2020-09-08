@@ -34,19 +34,24 @@ var closeSearchBar = function(){
 };
 
 
+let homepage_logo_animation = function(){
+  var logo_animator = $('.logo-animation .logo-animation-container');
+       
+  logo_animator.append('<img src="https://cdn.jsdelivr.net/gh/Davey-Wright/pursuit-collective@latest/assets/logo-animation.svg" />')
+
+  setTimeout( function() { 
+    $('.logo-animation').addClass('hide') 
+  }, 5000);
+}
+
+
 
 $(document).ready(function(){
   $('.navbar_search-button').click(openSearchBar);
   $('.footer_search-link').click(openSearchBar);
   $('.navbar_search-cancel-btn').click(closeSearchBar);   
+
+  homepage_logo_animation();
+  
+
 }) 
-
-
-
-window.onload = function() {
-  $('.logo-animation-container').append('<img src="https://cdn.jsdelivr.net/gh/Davey-Wright/pursuit-collective@master/assets/logo-animate.svg" />')
- 
-  this.setTimeout( () => {
-    $('.logo-animation-container').addClass('hide')
-  }, 4000);
-}
