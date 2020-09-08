@@ -1,5 +1,5 @@
 {
-  "name": "cobbles-kitchen",
+  "name": "pursuitcollective",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -30,5 +30,10 @@
     "postcss-simple-vars": "^5.0.2",
     "through2": "^3.0.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "git": "git add . && git commit -m",
+    "git-push": "git push origin master && sh ./purge.sh",
+    "purge": "sh ./purge.sh"
+  }
 }
