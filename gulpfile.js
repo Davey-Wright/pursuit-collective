@@ -108,7 +108,7 @@ function cacheBustTask(){
 }
 
 function watchTask(){
-  gulp.watch([paths.scss, 'src/js/**/*.js'],
+  gulp.watch(['src/scss/**/*.scss', 'src/js/**/*.js'],
     { interval: 1000, usePolling: true }, //Makes docker work
     gulp.series(
       gulp.parallel(scssTask, jsTask),
