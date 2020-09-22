@@ -8,10 +8,11 @@ body {
 .grid-table-of-content,
 .hero-section {
   min-height: calc(100vh - 6rem) !important;
+}
 
-  @include breakpoint_max('tablet_lg') {
-    min-height: auto;
-    height: auto;
+.hero-section {
+  @include breakpoint_min('desktop_sm') {
+    min-height: calc(100vh - 6rem) !important;
   }
 }
 
