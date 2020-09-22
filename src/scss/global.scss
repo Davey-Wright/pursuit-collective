@@ -9,7 +9,7 @@ body {
 .hero-section {
   min-height: calc(100vh - 6rem) !important;
 
-  @include breakpoint_min('tablet_lg') {
+  @include breakpoint_max('tablet_lg') {
     min-height: calc(66vh - 6rem) !important;
   }
 }
