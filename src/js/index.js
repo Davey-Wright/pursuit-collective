@@ -34,19 +34,25 @@ var closeSearchBar = function(){
 };
 
 
-let homepage_logo_animation = function(){
-  var logo_animator = $('.logo-animation .logo-animation-container');
+let homepage_logo_animation = function() {
+  let cookieName = 'logo-animation'
+  let logo_animator = $('.logo-animation .logo-animation-container');
        
-  logo_animator.append('<img src="https://cdn.jsdelivr.net/gh/Davey-Wright/pursuit-collective@latest/assets/logo-animation.svg" />')
+  if(typeof Cookies.get(cookieName) !== 'undefined') {
+    return
+  } else {
+    logo_animator.append('<img src="https://cdn.jsdelivr.net/gh/Davey-Wright/pursuit-collective@latest/assets/logo-animation.svg" />')
 
-  this.setTimeout( function() {  
-    $('.logo-animation').addClass('hide') 
-  }, 5000);
+    this.setTimeout( function() {  
+      $('.logo-animation').addClass('hide');
+      Cookies.set('logo-animation', 'disabled');
+    }, 5000);
+  }
 }
 
 
 
-$(document).ready(function(){
+$(document).ready(function() {
   $('.navbar_search-button').click(openSearchBar);
   $('.footer_search-link').click(openSearchBar);
   $('.navbar_search-cancel-btn').click(closeSearchBar);   
