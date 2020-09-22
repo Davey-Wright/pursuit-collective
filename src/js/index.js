@@ -52,6 +52,4 @@ $(document).ready(function(){
   $('.navbar_search-cancel-btn').click(closeSearchBar);   
 
   homepage_logo_animation();
-  
-
 }) 

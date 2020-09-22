@@ -15,7 +15,6 @@ const cssnano = require('cssnano');
 const replace = require('gulp-replace');
 const babel = require('gulp-babel');
 
-const tailwindcss = require('tailwindcss');
 const cssVars = require('postcss-simple-vars');
 const cssNested = require('postcss-nested');
 const cssImport = require('postcss-import');
@@ -30,7 +29,7 @@ const through2 = require('through2');
 const paths = { 
   js: ['src/js/components/*.js', 'src/js/index.js'],
   vendorsJS: 'src/vendors/js/**/*.js',
-  scss: 'src/scss/**/*.scss',
+  scss: 'src/scss/index.scss',
   vendorsCSS: 'src/vendors/css/**/*.css',
 }
 
