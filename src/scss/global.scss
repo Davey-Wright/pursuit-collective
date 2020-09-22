@@ -3,11 +3,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.section-hero-editorial, 
-.grid-table-of-content{
-  min-height: calc(100vh - 6rem) !important;
-}
-
 .hero-section {
   @include breakpoint_min('desktop_sm') {
     min-height: calc(100vh - 6rem) !important;
