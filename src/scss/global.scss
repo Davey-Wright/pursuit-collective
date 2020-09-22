@@ -5,8 +5,7 @@ body {
 
 .section-hero-editorial, 
 .grid-editorial-foreword, 
-.grid-table-of-content,
-.hero-section {
+.grid-table-of-content{
   min-height: calc(100vh - 6rem) !important;
 }
 
@@ -16,11 +15,9 @@ body {
   }
 }
 
-
 input[type="checkbox"]:checked + .checkbox-label {
   background-image: url("https://uploads-ssl.webflow.com/5f3275690eca62490835bf15/5f3d0a054ba9ef8b2713495e_check-box.svg");
 }
-
 
 .w--current .hover-line {
   transform: none !important;
