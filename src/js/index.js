@@ -42,7 +42,7 @@ let homepage_logo_animation = function() {
     $('.logo-animation').addClass('hide');
     return
   } else {
-    logo_animator.append('<img src="https://pursuitcollective.imfast.io/assets/logo-animation.svg" />')
+    logo_animator.append('<img src="https://pursuitcollective.imfast.io/assets/logo-animation.svg" />') 
     
     this.setTimeout( function() {
       $('.logo-animation').addClass('hide');
