@@ -32,9 +32,6 @@
   },
   "dependencies": {},
   "scripts": {
-    "git": "git add . && git commit -m",
-    "git-push": "git push origin master && sh ./purge.sh",
-    "purge": "sh ./purge.sh",
-    "purge-js": "sh ./purge-js.sh"
+    "git-commit": "git add . && git commit -m"
   }
 }
