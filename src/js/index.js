@@ -16,7 +16,7 @@ $('.subscription-article-topic').each(function() {
 var openSearchBar = function(){
   $(this).addClass('.navbar_search-button--active');
   $('.subnav-wrapper').addClass('subnav-wrapper--hidden');
-  $('.navbar_logo').addClass('navbar_logo--hidden');
+  $('.navbar_logo').addClass('navbar_logo--hidden'); 
   
   window.setTimeout(function(){
     $('.navbar_search-wrapper').removeClass('navbar_search-wrapper--hidden');

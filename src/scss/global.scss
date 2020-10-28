@@ -3,6 +3,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background: coral;
+}
+
 .hero-section {
   @include breakpoint_min('desktop_sm') {
     min-height: calc(100vh - 6rem) !important;
