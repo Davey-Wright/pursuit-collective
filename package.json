@@ -32,6 +32,6 @@
   },
   "dependencies": {},
   "scripts": {
-    "git-commit": "git add . && git commit -m"
+    "gdrive": "cp -r ./dist/. /Users/daveywright/Projects/CDN/pursuit-collective"
   }
 }
