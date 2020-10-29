@@ -3,13 +3,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background: coral;
-}
-
-.hero-section {
+.hero-section, .section-hero-editorial-navbar {
   @include breakpoint_min('desktop_sm') {
-    min-height: calc(100vh - 6rem) !important;
+    height: calc(100vh) !important;
+    padding-top: 6rem;
+    margin-top: -6rem;
+    background: white;
   }
 }
 
@@ -21,7 +20,18 @@ input[type="checkbox"]:checked + .checkbox-label {
   transform: none !important;
 }
 
-.cms-item:nth-child(3n+3) .cms-vertical-line {
+.cms-item:nth-child(3n+3) .cms-vertical-line, .cms-item:last-child .cms-vertical-line {
   display: none;
 } 
- 
+
+#cookiescript_bottompart {
+  display: none !important;
+}
+
+#cookiescript_accept {
+  background: #cb9274 !important;
+}
+
+#cookiescript_injected {
+  background: #232323 !important;
+}

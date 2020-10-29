@@ -60,11 +60,11 @@ function cssVendorsTask(){
 
 function scssTask(){    
   return gulp.src(paths.scss)
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([ autoprefixer(), cssnano ]))
     .pipe(rename('application.min.css'))
-    .pipe(sourcemaps.write('.'))
+    // .pipe(sourcemaps.write('.'))
     .pipe( touch() )
     .pipe(gulp.dest('dist')
   );

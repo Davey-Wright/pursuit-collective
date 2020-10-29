@@ -17,7 +17,7 @@ var openSearchBar = function(){
   $(this).addClass('.navbar_search-button--active');
   $('.subnav-wrapper').addClass('subnav-wrapper--hidden');
   $('.navbar_logo').addClass('navbar_logo--hidden'); 
-  
+  $('.navbar_search-wrapper').show();
   window.setTimeout(function(){
     $('.navbar_search-wrapper').removeClass('navbar_search-wrapper--hidden');
   }, 350);
@@ -28,10 +28,17 @@ var closeSearchBar = function(){
   $('.navbar_search-wrapper').addClass('navbar_search-wrapper--hidden');
   
   window.setTimeout(function(){
+    $('.navbar_search-wrapper').hide();
     $('.subnav-wrapper').removeClass('subnav-wrapper--hidden');
     $('.navbar_logo').removeClass('navbar_logo--hidden');
   }, 350);
 };
+
+var searchBar = function() {
+  $('.navbar_search-wrapper').hide();
+  $('.navbar_search-button').click(openSearchBar);
+  $('.navbar_search-cancel-btn').click(closeSearchBar);   
+}
 
 
 let homepage_logo_animation = function() {
@@ -42,8 +49,7 @@ let homepage_logo_animation = function() {
     $('.logo-animation').addClass('hide');
     return
   } else {
-    logo_animator.append('<img src="https://pursuitcollective.imfast.io/assets/logo-animation.svg" />') 
-    
+    logo_animator.append('<img src="https://drive.google.com/uc?id=1yT-X1mTW978ucA890xrc8M-RCGrInThU&export=download"/>') 
     this.setTimeout( function() {
       $('.logo-animation').addClass('hide');
       Cookies.set('logo-animation', 'disabled');
@@ -54,9 +60,7 @@ let homepage_logo_animation = function() {
 
 
 $(document).ready(function() {
-  $('.navbar_search-button').click(openSearchBar);
+  searchBar();
   $('.footer_search-link').click(openSearchBar);
-  $('.navbar_search-cancel-btn').click(closeSearchBar);   
-
   homepage_logo_animation();
 }) 
