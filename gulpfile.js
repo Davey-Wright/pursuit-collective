@@ -45,7 +45,7 @@ const touch = () => through2.obj( function( file, enc, cb ) {
 
 
 
-// compile, minify, save to dist/vendors.min.css
+// compile, minify, save to cdn/vendors.min.css
 function cssVendorsTask(){
   return gulp.src(paths.vendorsCSS)
     .pipe(plumber())
@@ -53,7 +53,7 @@ function cssVendorsTask(){
     .pipe( postcss([cssImport, cssVars, cssNested, autoprefixer(), cssnano]) )
     .pipe(rename('vendors.min.css'))
     .pipe( touch() )
-    .pipe( gulp.dest('dist') 
+    .pipe( gulp.dest('cdn') 
   );
 }
 
@@ -66,7 +66,7 @@ function scssTask(){
     .pipe(rename('application.min.css'))
     // .pipe(sourcemaps.write('.'))
     .pipe( touch() )
-    .pipe(gulp.dest('dist')
+    .pipe(gulp.dest('cdn')
   );
 }
 
@@ -76,7 +76,7 @@ function jsVendorsTask() {
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
     .pipe(touch())
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('cdn'))
 }
 
 function jsTask(){
@@ -93,7 +93,7 @@ function jsTask(){
     .pipe(uglify())
     .pipe(rename('application.min.js'))
     .pipe(touch())
-    .pipe(gulp.dest('dist')
+    .pipe(gulp.dest('cdn')
   );
 }
 

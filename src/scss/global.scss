@@ -12,6 +12,19 @@ body {
   }
 }
 
+.instagram .instagram-card:nth-child(odd) {
+  margin-top: 1.7rem;
+}
+
+.back-to-top-compass {
+  transform: rotateZ(45deg);
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: rotateZ(0deg);
+  }
+}
+
 input[type="checkbox"]:checked + .checkbox-label {
   background-image: url("https://uploads-ssl.webflow.com/5f3275690eca62490835bf15/5f3d0a054ba9ef8b2713495e_check-box.svg");
 }
@@ -24,14 +37,16 @@ input[type="checkbox"]:checked + .checkbox-label {
   display: none;
 } 
 
-#cookiescript_bottompart {
-  display: none !important;
-}
 
-#cookiescript_accept {
-  background: #cb9274 !important;
-}
 
-#cookiescript_injected {
-  background: #232323 !important;
-}
+// #cookiescript_bottompart {
+//   display: none !important;
+// }
+
+// #cookiescript_accept {
+//   background: #cb9274 !important;
+// }
+
+// #cookiescript_injected {
+//   background: #232323 !important;
+// }

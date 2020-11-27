@@ -1,5 +1,3 @@
-window.PursuitCollective = {};
-
 $('.subscription-article-topic').each(function() {
   var text = $(this).text();
 
@@ -58,9 +56,28 @@ let homepage_logo_animation = function() {
 }
 
 
+let set_editors_note_height = function() {
+  const el = $('.volume-1-editors-note'),
+        height = el.height() + window.innerHeight;
+
+  el.css('min-height', height);
+}
+
 
 $(document).ready(function() {
   searchBar();
   $('.footer_search-link').click(openSearchBar);
   homepage_logo_animation();
-}) 
+
+  if(window.location.pathname == '/volume-1') {
+    console.log('yo yoyo')
+    set_editors_note_height();
+    $(window).resize(set_editors_note_height)
+    $('#volume-1-chapters').load(`/volume-1-chapters #chapters`, function() {
+      sal({
+        threshold: 0.1
+      });
+    });
+  } 
+
+})  

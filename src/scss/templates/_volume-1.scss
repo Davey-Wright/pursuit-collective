@@ -1,0 +1,15 @@
+.volume-1 {
+
+  &-editors-note {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .foreword-character::-webkit-scrollbar {
+      display: none;
+    }
+
+    .foreword-character {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  }
+
+}
