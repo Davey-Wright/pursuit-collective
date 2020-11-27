@@ -68,7 +68,7 @@ $(document).ready(function() {
   searchBar();
   $('.footer_search-link').click(openSearchBar);
   homepage_logo_animation();
-
+  console.log('booom shaka laka')
   sal({
     threshold: 0.1
   });
@@ -98,3 +98,6 @@ $(document).ready(function() {
 
 
 /* <link rel='stylesheet' type='text/css' href="https://drive.google.com/uc?id=1FVumTLfcOQzyqqlRnyjsFMy88N57Ay5q&export=download" /> */
+/* <script src="https://drive.google.com/uc?id=1xcWrczffE9nO06FlzFlM9WUDPUZI56SC&export=download"></script>
+
+<script src="https://drive.google.com/uc?id=1VHUmMQVxDHHCipssnC5OigL4JiY_x4kB&export=download"></script> */
