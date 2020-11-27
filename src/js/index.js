@@ -69,15 +69,32 @@ $(document).ready(function() {
   $('.footer_search-link').click(openSearchBar);
   homepage_logo_animation();
 
+  sal({
+    threshold: 0.1
+  });
+
   if(window.location.pathname == '/volume-1') {
-    console.log('yo yoyo')
     set_editors_note_height();
     $(window).resize(set_editors_note_height)
     $('#volume-1-chapters').load(`/volume-1-chapters #chapters`, function() {
       sal({
         threshold: 0.1
       });
-    });
+    }); 
+
+    // $.ajax({
+    //   url: '/volume-1-chapters',
+    //   type: 'GET',
+    //   success: function(response) {
+    //     let chapters = $(response).find('#chapters')
+    //     $('#volume-1-chapters').html($(response).find('#chapters').html())
+    //   }
+    // })
   } 
 
 })  
+
+
+
+
+/* <link rel='stylesheet' type='text/css' href="https://drive.google.com/uc?id=1FVumTLfcOQzyqqlRnyjsFMy88N57Ay5q&export=download" /> */

@@ -32,6 +32,6 @@
   },
   "dependencies": {},
   "scripts": {
-    "cdn": "gsutil -m rsync -r ./cdn gs://pursuit-collective/cdn"
+    "cdn": "cp -r ./cdn/. /Users/daveywright/Projects/CDN/pursuit-collective"
   }
 }
