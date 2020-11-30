@@ -37,6 +37,16 @@ input[type="checkbox"]:checked + .checkbox-label {
   display: none;
 } 
 
+.verse-reference {
+  text-align: right;
+  font-size: .8rem;
+  font-family: 'Roboto Condensed',sans-serif;
+  line-height: 1.2;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.7rem;
+}
 
 
 // #cookiescript_bottompart {
