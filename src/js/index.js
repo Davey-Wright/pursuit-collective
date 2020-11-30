@@ -79,6 +79,8 @@ $(document).ready(function() {
     set_editors_note_height();
     $(window).resize(set_editors_note_height)
 
+    sal({ threshold: 0.1 })
+    
     var request = new XMLHttpRequest();
     request.open("GET", "https://pursuitcollective.com/volume-1-chapters", true);
     request.responseType = "document";
@@ -87,21 +89,14 @@ $(document).ready(function() {
       if (request.readyState == 4) {
         var doc = request.response;
         var elem = doc.getElementById("chapters");
-        $('#volume-1-chapters').html(elem.innerHTML);
+        $('#volume-1-chapters').html(elem.innerHTML).promise().then( sal({ threshold: 0.1 }) );
       }
     }
-    sal({
-      threshold: 0.1
-    });
   }
-
 })  
 
 
-/* <link rel='stylesheet' type='text/css' href="https://drive.google.com/uc?id=1FVumTLfcOQzyqqlRnyjsFMy88N57Ay5q&export=download" /> */
-/* <script src="https://drive.google.com/uc?id=1xcWrczffE9nO06FlzFlM9WUDPUZI56SC&export=download"></script>
+// <script src="https://drive.google.com/uc?id=1xcWrczffE9nO06FlzFlM9WUDPUZI56SC&export=download"></script>
 
-<script src="https://drive.google.com/uc?id=1VHUmMQVxDHHCipssnC5OigL4JiY_x4kB&export=download"></script> */
-
-
-
+// <script src='https://gitcdn.link/repo/Davey-Wright/pursuit-collective/master/cdn/application.min.js'></script>
+// <script src="https://drive.google.com/uc?id=1VHUmMQVxDHHCipssnC5OigL4JiY_x4kB&export=download"></script>
