@@ -48,6 +48,17 @@ input[type="checkbox"]:checked + .checkbox-label {
   margin-bottom: 1.7rem;
 }
 
+.w-richtext-figure-type-video {
+  padding-bottom: 66%;
+}
+
+.w-richtext figure.w-richtext-figure-type-video, .w-richtext figure[data-rt-type=video] {
+  width: 100%;
+}
+
+.w-richtext figure {
+  max-width: 100%;
+}
 
 // #cookiescript_bottompart {
 //   display: none !important;

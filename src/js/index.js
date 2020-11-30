@@ -71,7 +71,6 @@ $(document).ready(function() {
   searchBar();
   $('.footer_search-link').click(openSearchBar);
   homepage_logo_animation();
-  console.log('booom shaka laka')
   sal({
     threshold: 0.1
   });
@@ -79,28 +78,30 @@ $(document).ready(function() {
   if(window.location.pathname == '/volume-1') {
     set_editors_note_height();
     $(window).resize(set_editors_note_height)
-    $('#volume-1-chapters').load(`/volume-1-chapters #chapters`, function() {
-      sal({
-        threshold: 0.1
-      });
-    }); 
 
-    // $.ajax({
-    //   url: '/volume-1-chapters',
-    //   type: 'GET',
-    //   success: function(response) {
-    //     let chapters = $(response).find('#chapters')
-    //     $('#volume-1-chapters').html($(response).find('#chapters').html())
-    //   }
-    // })
-  } 
+    var request = new XMLHttpRequest();
+    request.open("GET", "https://pursuitcollective.com/volume-1-chapters", true);
+    request.responseType = "document";
+    request.send(null);
+    request.onreadystatechange = function() {
+      if (request.readyState == 4) {
+        var doc = request.response;
+        var elem = doc.getElementById("chapters");
+        $('#volume-1-chapters').html(elem.innerHTML);
+      }
+    }
+    sal({
+      threshold: 0.1
+    });
+  }
 
 })  
-
-
 
 
 /* <link rel='stylesheet' type='text/css' href="https://drive.google.com/uc?id=1FVumTLfcOQzyqqlRnyjsFMy88N57Ay5q&export=download" /> */
 /* <script src="https://drive.google.com/uc?id=1xcWrczffE9nO06FlzFlM9WUDPUZI56SC&export=download"></script>
 
 <script src="https://drive.google.com/uc?id=1VHUmMQVxDHHCipssnC5OigL4JiY_x4kB&export=download"></script> */
+
+
+
