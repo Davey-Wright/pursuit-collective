@@ -43,20 +43,17 @@ var searchBar = function() {
 
 
 let homepage_logo_animation = function() {
-  let cookieName = 'logo-animation'
   let logo_animator = $('.logo-animation .logo-animation-container');
-       
-  if(typeof Cookies.get(cookieName) !== 'undefined') {
+  if(sessionStorage.getItem('logo-animation') !== null) {
     $('.logo-animation').addClass('hide');
-    return
   } else {
     logo_animator.append('<img src="https://drive.google.com/uc?id=1yT-X1mTW978ucA890xrc8M-RCGrInThU&export=download"/>') 
     this.setTimeout( function() {
       $('.logo-animation').addClass('hide');
-      Cookies.set('logo-animation', 'disabled');
-    }, 5000);
+      sessionStorage.setItem('logo-animation', 'disabled');
+    }, 6000);
   }
-}
+} 
 
 
 let set_editors_note_height = function() {
@@ -71,20 +68,24 @@ $(document).ready(function() {
   searchBar();
   $('.footer_search-link').click(openSearchBar);
   homepage_logo_animation();
+
   sal({
     threshold: 0.1
   });
 
   if(window.location.pathname == '/volume-1') {
-    set_editors_note_height();
-    $(window).resize(set_editors_note_height)
+
+    if(window.innerWidth > 991) {
+      set_editors_note_height();
+      $(window).resize(set_editors_note_height)
+    }
+
 
     sal({ threshold: 0.1 })
     
     var request = new XMLHttpRequest();
     request.open("GET", "https://pursuitcollective.com/volume-1-chapters", true);
     request.responseType = "document";
-    request.send(null);
     request.onreadystatechange = function() {
       if (request.readyState == 4) {
         var doc = request.response;
@@ -92,11 +93,12 @@ $(document).ready(function() {
         $('#volume-1-chapters').html(elem.innerHTML).promise().then( sal({ threshold: 0.1 }) );
       }
     }
+    request.send(null);
   }
 })  
 
 
-// <script src="https://drive.google.com/uc?id=1xcWrczffE9nO06FlzFlM9WUDPUZI56SC&export=download"></script>
 
 // <script src='https://gitcdn.link/repo/Davey-Wright/pursuit-collective/master/cdn/application.min.js'></script>
+
 // <script src="https://drive.google.com/uc?id=1VHUmMQVxDHHCipssnC5OigL4JiY_x4kB&export=download"></script>
