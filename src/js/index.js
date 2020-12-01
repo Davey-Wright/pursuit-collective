@@ -47,11 +47,11 @@ let homepage_logo_animation = function() {
   if(sessionStorage.getItem('logo-animation') !== null) {
     $('.logo-animation').addClass('hide');
   } else {
-    logo_animator.append('<img src="https://drive.google.com/uc?id=1yT-X1mTW978ucA890xrc8M-RCGrInThU&export=download"/>') 
+    logo_animator.append('<img src="https://gitcdn.xyz/repo/Davey-Wright/pursuit-collective/master/cdn/logo-animation.svg"/>') 
     this.setTimeout( function() {
       $('.logo-animation').addClass('hide');
       sessionStorage.setItem('logo-animation', 'disabled');
-    }, 6000);
+    }, 5000);
   }
 } 
 
