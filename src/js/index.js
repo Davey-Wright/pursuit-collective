@@ -84,7 +84,7 @@ $(document).ready(function() {
     sal({ threshold: 0.1 })
     
     var request = new XMLHttpRequest();
-    request.open("GET", "https://pursuitcollective.com/volume-1-chapters", true);
+    request.open("GET", "https://www.pursuitcollective.com/volume-1-chapters", true); 
     request.responseType = "document";
     request.onreadystatechange = function() {
       if (request.readyState == 4) {
