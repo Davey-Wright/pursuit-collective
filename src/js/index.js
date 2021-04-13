@@ -94,11 +94,16 @@ $(document).ready(function() {
       }
     }
     request.send(null);
-  }
+  } 
 })  
 
 
+// <link rel='stylesheet' href="https://drive.google.com/uc?id=1FVumTLfcOQzyqqlRnyjsFMy88N57Ay5q&export=download"/>
 
-// <script src='https://gitcdn.link/repo/Davey-Wright/pursuit-collective/master/cdn/application.min.js'></script>
 
-// <script src="https://drive.google.com/uc?id=1VHUmMQVxDHHCipssnC5OigL4JiY_x4kB&export=download"></script>
+// https://drive.google.com/file/d/1xcWrczffE9nO06FlzFlM9WUDPUZI56SC/view?usp=sharing
+
+
+// "https://drive.google.com/uc?id=1xcWrczffE9nO06FlzFlM9WUDPUZI56SC&export=download"
+
+
