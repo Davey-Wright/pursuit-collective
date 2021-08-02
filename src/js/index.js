@@ -44,17 +44,21 @@ var searchBar = function() {
 
 let homepage_logo_animation = function() {
   let logo_animator = $('.logo-animation .logo-animation-container');
+  const image = document.createElement('img')
+  image.src = "https://cdn.jsdelivr.net/gh/davey-wright/pursuit-collective/cdn/logo-animation.svg"
+
   if(sessionStorage.getItem('logo-animation') !== null) {
     console.log('no animate')
     $('.logo-animation').addClass('hide');
   } else {
     console.log('animate')
-    logo_animator.append('<img src="https://cdn.jsdelivr.net/gh/davey-wright/pursuit-collective/cdn/logo-animation.svg/>') 
+    logo_animator.append(image) 
     this.setTimeout( function() {
       $('.logo-animation').addClass('hide');
       sessionStorage.setItem('logo-animation', 'disabled');
     }, 5000);
   }
+
 } 
 
 
