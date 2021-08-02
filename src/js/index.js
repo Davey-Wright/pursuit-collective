@@ -49,7 +49,7 @@ let homepage_logo_animation = function() {
     $('.logo-animation').addClass('hide');
   } else {
     console.log('animate')
-    logo_animator.append('<img src="https://raw.githubusercontent.com/Davey-Wright/pursuit-collective/master/cdn/logo-animation.svg/>') 
+    logo_animator.append('<img src="https://cdn.jsdelivr.net/gh/davey-wright/pursuit-collective/cdn/logo-animation.svg/>') 
     this.setTimeout( function() {
       $('.logo-animation').addClass('hide');
       sessionStorage.setItem('logo-animation', 'disabled');
@@ -61,7 +61,6 @@ let homepage_logo_animation = function() {
 let set_editors_note_height = function() {
   const el = $('.volume-1-editors-note'),
         height = el.height() + window.innerHeight;
-
   el.css('min-height', height);
 }
 
