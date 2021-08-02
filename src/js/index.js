@@ -44,6 +44,7 @@ var searchBar = function() {
 
 let homepage_logo_animation = function() {
   let logo_animator = $('.logo-animation .logo-animation-container');
+  
   console.log(logo_animator)
 
   if(sessionStorage.getItem('logo-animation') !== null) {
@@ -73,7 +74,7 @@ let set_editors_note_height = function() {
 $(document).ready(function() {
   searchBar();
   $('.footer_search-link').click(openSearchBar);
-  
+
   homepage_logo_animation();
 
   sal({
