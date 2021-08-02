@@ -47,7 +47,7 @@ let homepage_logo_animation = function() {
   if(sessionStorage.getItem('logo-animation') !== null) {
     $('.logo-animation').addClass('hide');
   } else {
-    logo_animator.append('<img src="https://gitcdn.xyz/repo/Davey-Wright/pursuit-collective/master/cdn/logo-animation.svg"/>') 
+    logo_animator.append('<img src="https://raw.githubusercontent.com/Davey-Wright/pursuit-collective/master/cdn/logo-animation.svg/>') 
     this.setTimeout( function() {
       $('.logo-animation').addClass('hide');
       sessionStorage.setItem('logo-animation', 'disabled');
