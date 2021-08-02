@@ -53,7 +53,8 @@ let homepage_logo_animation = function() {
   } else {
     console.log('animate')
     logo_animator.append(image) 
-    this.setTimeout( function() {
+    console.log(this)
+    window.setTimeout( function() {
       $('.logo-animation').addClass('hide');
       sessionStorage.setItem('logo-animation', 'disabled');
     }, 5000);
